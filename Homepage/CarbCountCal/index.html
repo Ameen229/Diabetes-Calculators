@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carb Count Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay"></div>
+    <div class="container">
+      <header>
+        <h1>Carb Count Calculator</h1>
+        <p>Know how many carbs you’re consuming per meal</p>
+      </header>
+
+      <div class="calculator">
+        <div class="calc-section">
+          <h2>Carbohydrate Count</h2>
+          <div class="form-group">
+            <label for="carbsPerItem">Carbohydrates per item (grams)</label>
+            <input type="number" id="carbsPerItem" placeholder="e.g., 15" />
+          </div>
+          <div class="form-group">
+            <label for="quantity">Number of items you're eating</label>
+            <input type="number" id="quantity" placeholder="e.g., 2" />
+          </div>
+          <button onclick="calculateCarbIntake()">Calculate Total Carbs</button>
+          <button onclick="showExample()">How to Use with Example</button>
+          <div class="output" id="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

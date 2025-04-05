@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bolus Insulin Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="container">
+      <header>
+        <h1>Bolus Insulin Calculator</h1>
+        <p>Calculate your bolus insulin dosage with ease</p>
+      </header>
+
+      <div class="calc-section">
+        <h2>Enter Your Details</h2>
+        <div class="form-group">
+          <label for="carbs">Carbohydrates (grams):</label>
+          <input type="number" id="carbs" placeholder="e.g., 60" />
+        </div>
+        <div class="form-group">
+          <label for="current">Current Blood Sugar (mg/dL):</label>
+          <input type="number" id="current" placeholder="e.g., 180" />
+        </div>
+        <div class="form-group">
+          <label for="target">Target Blood Sugar (mg/dL):</label>
+          <input type="number" id="target" placeholder="e.g., 120" />
+        </div>
+        <div class="form-group">
+          <label for="carbRatio">Carb Ratio (grams/unit):</label>
+          <input type="number" id="carbRatio" placeholder="e.g., 10" />
+        </div>
+        <div class="form-group">
+          <label for="correctionFactor">Correction Factor (mg/dL per unit):</label>
+          <input type="number" id="correctionFactor" placeholder="e.g., 50" />
+        </div>
+
+        <button onclick="calculateBolus()">Calculate Bolus</button>
+
+        <div class="output" id="output"></div>
+
+        <button class="how-to-btn" onclick="showPopup()">How to Use</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popup -->
+  <div class="popup-container" id="popup">
+    <div class="popup-box">
+      <h3>Example</h3>
+      <p>
+        Suppose you ate 60g carbs, your current sugar is 180 mg/dL, target is 120 mg/dL,
+        carb ratio is 10g/unit, correction factor is 50 mg/dL/unit. <br /><br />
+        Carb Insulin = 60 / 10 = 6 units <br />
+        Correction Insulin = (180 - 120) / 50 = 1.2 units <br />
+        <strong>Total Bolus = 6 + 1.2 = 7.2 units</strong>
+      </p>
+      <button onclick="hidePopup()">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

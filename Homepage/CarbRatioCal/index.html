@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carb Ratio & Correction Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <div class="overlay"></div>
+    <div class="container">
+      <header>
+        <h1>Carb Ratio Calculator</h1>
+        <p>Calculate insulin dosage using Carb Ratio & Correction Factor</p>
+      </header>
+
+      <div class="calculator">
+        <div class="calc-section">
+          <h2>Insulin Calculator</h2>
+          <div class="form-group">
+            <label for="carbs"><strong>Total Carbohydrates (g):</strong></label>
+            <input type="number" id="carbs" placeholder="e.g., 60" />
+          </div>
+          <div class="form-group">
+            <label for="carbRatio"><strong>Carb Ratio (ICR):</strong></label>
+            <input type="number" id="carbRatio" placeholder="e.g., 10" />
+          </div>
+          <div class="form-group">
+            <label for="currentBG"><strong>Current Blood Glucose:</strong></label>
+            <input type="number" id="currentBG" placeholder="e.g., 180" />
+          </div>
+          <div class="form-group">
+            <label for="targetBG"><strong>Target Blood Glucose:</strong></label>
+            <input type="number" id="targetBG" placeholder="e.g., 120" />
+          </div>
+          <div class="form-group">
+            <label for="correctionFactor"><strong>Correction Factor (ISF):</strong></label>
+            <input type="number" id="correctionFactor" placeholder="e.g., 50" />
+          </div>
+          <button onclick="calculateInsulin()">Calculate</button>
+          <button id="howToUse">How to Use</button>
+          <div class="output" id="result"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>

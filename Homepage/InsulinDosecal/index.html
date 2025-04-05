@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insulin Dose Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="hero">
+        <div class="overlay"></div>
+        <div class="container">
+            <header>
+                <h1>Insulin Dose Calculator</h1>
+                <p>Calculate your correction and carbohydrate insulin doses accurately.</p>
+            </header>
+            
+            <div class="calculator">
+                <div class="calc-section">
+                    <h2>Correction Dose</h2>
+                    <div class="form-group">
+                        <label>Current Blood Sugar (mg/dL):</label>
+                        <input type="number" id="currentBloodSugar" placeholder="e.g., 210">
+                    </div>
+                    <div class="form-group">
+                        <label>Target Blood Sugar (mg/dL):</label>
+                        <input type="number" id="targetBloodSugar" placeholder="e.g., 130">
+                    </div>
+                    <div class="form-group">
+                        <label>Correction Factor:</label>
+                        <input type="number" id="correctionFactor" placeholder="e.g., 50">
+                    </div>
+                </div>
+
+                <div class="calc-section">
+                    <h2>Carbohydrate Dose</h2>
+                    <div class="form-group">
+                        <label>Total Carbs (grams):</label>
+                        <input type="number" id="totalCarbs" placeholder="e.g., 75">
+                    </div>
+                    <div class="form-group">
+                        <label>Carb Ratio:</label>
+                        <input type="number" id="carbRatio" placeholder="e.g., 10">
+                    </div>
+                </div>
+
+                <div class="calc-section output-section">
+                    <h2>Insulin Dose Output</h2>
+                    <p><strong>Correction Dose:</strong> <span id="correctionDose">--</span> units</p>
+                    <p><strong>Carb Dose:</strong> <span id="carbDose">--</span> units</p>
+                    <p><strong>Total Insulin Dose:</strong> <span id="totalDose">--</span> units</p>
+                </div>
+
+                <button onclick="calculateDose()">Calculate</button>
+                <button id="howToUse">How to Use</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
